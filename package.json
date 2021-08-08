@@ -1,20 +1,22 @@
 {
   "name": "eleventy-sample",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Sonny Day For Abbie static website",
   "main": "index.js",
+  "homepage": "http://sonnyjustine.github.io/A-Sonny-Day-ForAbbie",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch scss -o css",
     "build": "npx @11ty/eleventy --input=. --output=_site",
     "start": "npx @11ty/eleventy --serve --port=8083",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d _site"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "gh-pages": "^3.2.3"
   },
   "dependencies": {
     "compass-mixins": "^0.12.10",
