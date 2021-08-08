@@ -1,0 +1,104 @@
+@import '../node_modules/compass-mixins/lib/compass/css3';
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1200px;
+$old-main-bg: #FEDCC8;
+$old-cover-bg: #2D112B;
+$new-main-bg: #FFFFF;
+$new-cover-bg: #FFFAAA;
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  background-color: $new-main-bg;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+.parallax__layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  img{
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.parallax__cover{
+  background: $new-cover-bg;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+$parallax__layers: 2;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}
+
+#title {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../assets/images/title.png) no-repeat;
+    width: 3000px;
+    height: 800px;
+    padding-left: 3000px;
+}
+
+#sun-moon {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../assets/images/sun-moon.png) no-repeat;
+    width: 3000px;
+    height: 1000px;
+    padding-left: 3000px;
+}
+
+@media (max-width: $breakpoint-desktop) {
+    #sun-moon {
+        background: url(../assets/images/sun-moon-md.png) no-repeat;
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    #title {
+        background: url(../assets/images/title-sm.png) no-repeat;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    #sun-moon {
+        background: url(../assets/images/sun-moon-sm.png) no-repeat;
+    }
+}
