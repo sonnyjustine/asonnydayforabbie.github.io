@@ -26,7 +26,9 @@ body {
   .parallax__layer img {
     display: block;
     position: absolute;
-    top: 0; }
+    top: 0;
+    bottom: 0;
+    margin: auto; }
 
 .parallax__cover {
   background: #FFFAAA;
@@ -66,13 +68,13 @@ body {
   padding-left: 3000px; }
 
 @media (max-width: 1200px) {
+  #title {
+    background: url(../assets/images/title-md.png) no-repeat; }
   #sun-moon {
     background: url(../assets/images/sun-moon-md.png) no-repeat; } }
 
-@media (max-width: 1024px) {
-  #title {
-    background: url(../assets/images/title-sm.png) no-repeat; } }
-
 @media (max-width: 768px) {
+  #title {
+    background: url(../assets/images/title-sm.png) no-repeat; }
   #sun-moon {
     background: url(../assets/images/sun-moon-sm.png) no-repeat; } }
