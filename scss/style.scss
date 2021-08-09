@@ -6,7 +6,7 @@ $breakpoint-laptop: 1024px;
 $breakpoint-desktop: 1200px;
 $old-main-bg: #FEDCC8;
 $old-cover-bg: #2D112B;
-$new-main-bg: #FFFFF;
+$new-main-bg: #FFFFFF;
 $new-cover-bg: #FFFAAA;
 
 *{
@@ -41,7 +41,9 @@ body{
   img{
     display: block;
     position: absolute;
+    top: 0;
     bottom: 0;
+    margin: auto;
   }
 }
 
@@ -86,18 +88,20 @@ $parallax__layers: 2;
 }
 
 @media (max-width: $breakpoint-desktop) {
+    #title {
+        background: url(../assets/images/title-md.png) no-repeat;
+    }
+
     #sun-moon {
         background: url(../assets/images/sun-moon-md.png) no-repeat;
     }
 }
 
-@media (max-width: $breakpoint-laptop) {
+@media (max-width: $breakpoint-tablet) {
     #title {
         background: url(../assets/images/title-sm.png) no-repeat;
     }
-}
 
-@media (max-width: $breakpoint-tablet) {
     #sun-moon {
         background: url(../assets/images/sun-moon-sm.png) no-repeat;
     }

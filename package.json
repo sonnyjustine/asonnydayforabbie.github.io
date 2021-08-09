@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Sonny Day For Abbie static website",
   "main": "index.js",
-  "homepage": "http://sonnyjustine.github.io/A-Sonny-Day-ForAbbie",
+  "homepage": "http://asonnydayforabbie.github.io",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch scss -o css",
