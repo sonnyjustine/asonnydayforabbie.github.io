@@ -31,25 +31,27 @@ body {
     margin: auto; }
 
 .parallax__cover {
-  background: #FFFAAA;
   display: block;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  height: 2000px;
+  height: 4000px;
   z-index: 2; }
 
 .parallax__layer__0 {
-  transform: translateZ(-100px) scale(2); }
+  transform: translateZ(-150px) scale(2.5); }
 
 .parallax__layer__1 {
-  transform: translateZ(-50px) scale(1.5); }
+  transform: translateZ(-100px) scale(2); }
 
 .parallax__layer__2 {
+  transform: translateZ(-50px) scale(1.5); }
+
+.parallax__layer__3 {
   transform: translateZ(0px) scale(1); }
 
-#title {
+.parallax__layer img {
   display: block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -58,23 +60,33 @@ body {
   height: 800px;
   padding-left: 3000px; }
 
-#sun-moon {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(../assets/images/sun-moon.png) no-repeat;
-  width: 3000px;
-  height: 1000px;
-  padding-left: 3000px; }
+#title {
+  background: url(../assets/images/title.png) no-repeat; }
 
-@media (max-width: 1200px) {
+#sun-moon {
+  background: url(../assets/images/sun-moon.png) no-repeat; }
+
+#tya {
+  background: url(../assets/images/tya.png) no-repeat; }
+
+#hands {
+  background: url(../assets/images/hands.png) no-repeat; }
+
+@media only screen and (max-width: 1200px), only screen and (max-device-width: 1200px) {
   #title {
     background: url(../assets/images/title-md.png) no-repeat; }
   #sun-moon {
     background: url(../assets/images/sun-moon-md.png) no-repeat; } }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
   #title {
     background: url(../assets/images/title-sm.png) no-repeat; }
   #sun-moon {
-    background: url(../assets/images/sun-moon-sm.png) no-repeat; } }
+    background: url(../assets/images/sun-moon-sm-tall.png) no-repeat;
+    height: 1500px !important; }
+  #tya {
+    background: url(../assets/images/tya-sm.png) no-repeat; }
+  #hands {
+    background: url(../assets/images/hands-sm.png) no-repeat; }
+  .parallax__layer img {
+    height: 1000px; } }
