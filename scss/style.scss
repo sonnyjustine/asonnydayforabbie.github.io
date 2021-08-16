@@ -54,7 +54,25 @@ body{
   left: 0;
   right: 0;
   height: 4000px;
+  width: 100%;
   z-index: 2;
+  padding: 1000px 20px 20px 20px;
+}
+
+.photo-row {
+    background: $new-cover-bg;
+    display: table;
+    margin: 0 auto;
+}
+
+.photo-col {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.photo-col img {
+    height: 500px;
 }
 
 $parallax__layers: 3;
