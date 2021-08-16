@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $("#parallax-cover").width($(window).width());
+    //$(".photo-row").width($(window).width());
     /*var counter = 0;
     var lastPointScroll = 0;
     var test1 = -3000;
