@@ -37,7 +37,22 @@ body {
   left: 0;
   right: 0;
   height: 4000px;
-  z-index: 2; }
+  width: 100%;
+  z-index: 2;
+  padding: 1000px 20px 20px 20px; }
+
+.photo-row {
+  background: #FFFAAA;
+  display: table;
+  margin: 0 auto; }
+
+.photo-col {
+  float: left;
+  width: 50%;
+  padding: 10px; }
+
+.photo-col img {
+  height: 500px; }
 
 .parallax__layer__0 {
   transform: translateZ(-150px) scale(2.5); }
