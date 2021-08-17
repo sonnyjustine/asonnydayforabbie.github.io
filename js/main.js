@@ -1,5 +1,29 @@
 $(document).ready(function () {
-    $("#parallax-cover").width($(window).width());
+    $(".parallax__cover").width($(window).width());
+    $(".parallax__cover__mobile").width($(window).width());
+
+    $(window).on('resize', function() {
+        $(".parallax__cover").width($(window).width());
+        $(".parallax__cover__mobile").width($(window).width());
+    });
+
+    function showImages(el) {
+        var windowHeight = $(window).height();
+        $(el).each(function() {
+            var thisPos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if(topOfWindow + windowHeight - 200 > thisPos) {
+                $(this).addClass("fadeIn");
+            } else{
+                $(this).removeClass("fadeIn");
+            }
+        });
+    }
+
+    $('#asdfa').scroll(function(){
+        showImages('.photo');
+    });
     //$(".photo-row").width($(window).width());
     /*var counter = 0;
     var lastPointScroll = 0;
